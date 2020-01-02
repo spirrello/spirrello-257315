@@ -1,5 +1,5 @@
 module "cluster01" {
-  source = "git@github.com:spirrello/terraform-gcp.git//modules/gke"
+  source = "github.com/spirrello/terraform-gcp.git//modules/gke"
 
   project = "${var.project}"
   region = "${var.region}"
