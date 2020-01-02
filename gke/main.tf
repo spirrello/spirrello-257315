@@ -5,7 +5,7 @@ module "cluster01" {
   region = "${var.region}"
   cluster_name = "${var.project}-01"
   description = "Testing apps on K8s"
-  default_max_pods_per_node = "50"
+  max_pods_per_node = "50"
   general_purpose_machine_type = "n1-standard-1"
   general_purpose_min_node_count = 2
   general_purpose_max_node_count = 4
