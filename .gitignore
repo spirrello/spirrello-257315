@@ -1,0 +1,18 @@
+#  Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+#we're not storing anything sensitive so it's ok to commit these
+#*.tfvars
+
+# account file
+**/*.json
+
+
+#log files
+**/*.log
+
+
