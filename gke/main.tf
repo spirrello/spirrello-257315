@@ -4,6 +4,7 @@ module "cluster01" {
   project = "${var.project}"
   region = "${var.region}"
   cluster_name = "${var.project}-01"
+  disable_public_endpoint = false
   description = "Testing apps on K8s"
   max_pods_per_node = "50"
   general_purpose_machine_type = "n1-standard-1"
