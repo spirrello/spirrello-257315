@@ -16,6 +16,8 @@ module "cluster01" {
   subnetwork = "k8s-10-0-0-0-24"
   maintenance_start = "03:00"
   cluster_ipv4_cidr_block = ""
+  cluster_autoscaling_cpu_min = 6
+  cluster_autoscaling_memory_min = 22
   cluster_autoscaling_cpu_max = 12
   cluster_autoscaling_memory_max = 32
 }
