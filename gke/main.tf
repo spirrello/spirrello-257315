@@ -1,3 +1,13 @@
+variable "home_ip" {
+  type = string
+  description = "home ip address"
+}
+
+variable "office_ip" {
+  type = string
+  description = "office ip address"
+}
+
 module "cluster01" {
   source = "github.com/spirrello/terraform-gcp.git//modules/gke"
 
@@ -20,4 +30,19 @@ module "cluster01" {
   cluster_autoscaling_memory_min = 22
   cluster_autoscaling_cpu_max = 12
   cluster_autoscaling_memory_max = 32
+  master_authorized_networks_config = [{
+    cidr_blocks = [{
+      cidr_block   = "10.0.0.0/8"
+      display_name = "10-0-0-0-8"
+    },{
+      cidr_block   = "172.16.0.0/12"
+      display_name = "172-16-0-0-12"
+    },{
+      cidr_block   = var.home_ip
+      display_name = "home"
+    },{
+     cidr_block   = var.office_ip
+     display_name = "office"
+    }],
+  }]
 }
