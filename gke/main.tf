@@ -17,7 +17,7 @@ module "cluster01" {
   disable_public_endpoint = false
   description = "Testing apps on K8s"
   max_pods_per_node = "50"
-  general_purpose_machine_type = "n1-standard-1"
+  general_purpose_machine_type = "n1-standard-4"
   general_purpose_min_node_count = 2
   general_purpose_max_node_count = 4
   tags = ["cluster01"]
