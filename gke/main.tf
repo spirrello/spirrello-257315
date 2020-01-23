@@ -24,8 +24,8 @@ module "cluster01" {
   description = "Testing apps on K8s"
   disable_public_endpoint = false
   general_purpose_machine_type = "n1-standard-4"
-  general_purpose_min_node_count = 2
-  general_purpose_max_node_count = 4
+  general_purpose_min_node_count = 1
+  general_purpose_max_node_count = 2
   maintenance_start = "03:00"
   master_ipv4_cidr_block = "172.16.0.0/28"
   max_pods_per_node = "50"
