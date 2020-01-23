@@ -23,5 +23,5 @@ module "gke-node-pool-01" {
   max_pods_per_node = "50"
   #network = "k8s"
   # subnetwork = "k8s-10-0-0-0-24"
-  tags = "HOLA"
+  tags = ["HOLA"]
 }
