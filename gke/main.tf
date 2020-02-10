@@ -12,7 +12,7 @@ module "cluster01" {
   source = "github.com/spirrello/terraform-gcp.git//modules/gke"
 
   #don't install istio by default
-  istio_config = "true"
+  istio_config = false
   project = "${var.project}"
   region = "${var.region}"
   cluster_name = "${var.project}-01"
