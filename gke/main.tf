@@ -11,7 +11,7 @@ variable "office_ip" {
 module "cluster01" {
   source = "github.com/spirrello/terraform-gcp.git//modules/gke"
 
-  #don't install istio by default
+  #install istio by default, false installs istio
   istio_config = false
   istio_auth = "AUTH_MUTUAL_TLS"
   project = var.project
