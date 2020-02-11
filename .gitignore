@@ -15,4 +15,5 @@
 #log files
 **/*.log
 
-
+# TF plan files
+plan
