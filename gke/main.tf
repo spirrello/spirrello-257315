@@ -13,8 +13,9 @@ module "cluster01" {
 
   #don't install istio by default
   istio_config = false
-  project = "${var.project}"
-  region = "${var.region}"
+  istio_auth = "AUTH_MUTUAL_TLS"
+  project = var.project
+  region = var.region
   cluster_name = "${var.project}-01"
   cluster_ipv4_cidr_block = ""
   cluster_autoscaling_cpu_min = 6
