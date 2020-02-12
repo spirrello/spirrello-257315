@@ -1,11 +1,11 @@
 variable "project" {
-  type = string
+  type        = string
   description = "Google Cloud project name"
-  default = "spirrello-257315"
+  default     = "spirrello-257315"
 }
 
 variable "region" {
-  type = string
+  type        = string
   description = "Default Google Cloud region"
-  default = "us-central1"
+  default     = "us-central1"
 }
